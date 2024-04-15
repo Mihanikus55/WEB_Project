@@ -75,7 +75,7 @@ section .signin
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(0,0,0,9);
 }
-section .signin .content 
+section .signin .content
 {
   position: relative;
   width: 100%;
@@ -85,13 +85,13 @@ section .signin .content
   flex-direction: column;
   gap: 40px;
 }
-section .signin .content h2 
+section .signin .content h2
 {
   font-size: 2em;
   color: #0f0;
   text-transform: uppercase;
 }
-section .signin .content .form 
+section .signin .content .form
 {
   width: 100%;
   display: flex;
@@ -103,7 +103,7 @@ section .signin .content .form .inputBox
   position: relative;
   width: 100%;
 }
-section .signin .content .form .inputBox input 
+section .signin .content .form .inputBox input
 {
   position: relative;
   width: 100%;
@@ -116,7 +116,7 @@ section .signin .content .form .inputBox input
   font-weight: 500;
   font-size: 1em;
 }
-section .signin .content .form .inputBox i 
+section .signin .content .form .inputBox i
 {
   position: absolute;
   left: 0;
@@ -133,14 +133,14 @@ section .signin .content .form .inputBox i
   font-size: 0.8em;
   color: #fff;
 }
-.signin .content .form .links 
+.signin .content .form .links
 {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.signin .content .form .links a 
+.signin .content .form .links a
 {
   color: #fff;
   text-decoration: none;
