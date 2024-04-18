@@ -43,7 +43,7 @@ def reqister():
     #     db_sess.add(user)
     #     db_sess.commit()
     #     return redirect('/login')
-    return render_template('register.html', title='Регистрация', form=form)
+    return render_template('register.html', title='Registration', form=form)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -58,7 +58,7 @@ def login():
     #     return render_template('login.html',
     #                            message="Неправильный логин или пароль",
     #                            form=form)
-    return render_template('login.html', form=form)
+    return render_template('login.html', title="Authorization", form=form)
 
 
 if __name__ == '__main__':

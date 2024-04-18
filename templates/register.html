@@ -1,0 +1,35 @@
+{% extends "log_reg_base.html" %}
+
+{% block content %}
+
+<form class="signin" action="" method="post">
+
+    <div class="content">
+
+        <h2>Sign In</h2>
+
+        <div class="form">
+            {% for item in form if item.name != "csrf_token"%}
+            {% if item.name != "submit" %}
+            <div class="inputBox">
+
+                {{item}} <i>{{item.label}}</i>
+
+            </div>
+            {% else %}
+            <div class="inputBox">
+                {{message}}
+                {{item}}
+
+            </div>
+
+            {% endif %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</form>
+
+{% endblock %}
