@@ -33,21 +33,22 @@ def register():
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
-            return render_template('register.html', title='Регистрация',
+            return render_template('register.html', title='Registration',
                                    form=form,
-                                   message="Пароли не совпадают")
+                                   message="Password mismatch")
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.email == form.email.data).first():
-            return render_template('register.html', title='Регистрация',
+            return render_template('register.html', title='Registration',
                                    form=form,
-                                   message="Такой пользователь уже есть")
+                                   message="There is already such a user")
         user = User(
             email=form.email.data
         )
         user.set_password(form.password.data)
         db_sess.add(user)
         db_sess.commit()
-        return redirect('/login')
+        login_user(user)
+        return redirect('/')
     return render_template('register.html', title='Registration', form=form)
 
 
@@ -60,8 +61,8 @@ def login():
         if user and user.check_password(form.password.data):
             login_user(user)
             return redirect("/")
-        return render_template('login.html',
-                               message="Неправильный логин или пароль",
+        return render_template('login.html', title="Authorization",
+                               message="Incorrect login or password",
                                form=form)
     return render_template('login.html', title="Authorization", form=form)
 
