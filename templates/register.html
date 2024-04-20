@@ -2,25 +2,27 @@
 
 {% block content %}
 
-<form class="signin" action="" method="post">
+<form class="sign" action="" method="post">
+    {{ form.hidden_tag() }}
 
     <div class="content">
 
-        <h2>Sign In</h2>
+        <h2>Sign Up</h2>
 
         <div class="form">
             {% for item in form if item.name != "csrf_token"%}
             {% if item.name != "submit" %}
             <div class="inputBox">
 
-                {{item}} <i>{{item.label}}</i>
+                {{item(class="form-control")}} <i>{{item.label}}</i>
 
             </div>
             {% else %}
-            <div class="inputBox">
+            <div class="mesg">
                 {{message}}
-                {{item}}
-
+            </div>
+            <div class="inputBox">
+                {{item(type="submit", class="btn btn-primary")}}
             </div>
 
             {% endif %}

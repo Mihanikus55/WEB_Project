@@ -2,7 +2,8 @@
 
 {% block content %}
 
-<form class="signin" action="" method="post">
+<form class="sign" action="" method="post">
+    {{ form.hidden_tag() }}
 
     <div class="content">
 
@@ -17,6 +18,10 @@
 
             </div>
             {% else %}
+            <div class="mesg">
+                {{message}}
+            </div>
+
             <div class="links"><a href="/forgot_password">Forgot Password</a> <a href="/register">Sign up</a></div>
 
             <div class="inputBox">
