@@ -24,7 +24,7 @@ def main():
 @app.route("/")
 def index():
     if current_user.is_authenticated:
-        return f"<h3>Поздравляем, вы залогинились</h3>{current_user}"
+        return redirect("/lobby")
     return redirect("/login")
 
 
@@ -82,6 +82,7 @@ def logout():
 
 
 @app.route('/lobby', methods=['GET', 'POST'])
+@login_required
 def lobby():
     return render_template('main_page.html', title="MiVa")
 
