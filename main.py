@@ -32,15 +32,16 @@ def index():
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        if form.password.data != form.password_again.data:
-            return render_template('register.html', title='Registration',
-                                   form=form,
-                                   message="Password mismatch")
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.email == form.email.data).first():
             return render_template('register.html', title='Registration',
                                    form=form,
                                    message="There is already such a user")
+        if form.password.data != form.password_again.data:
+            return render_template('register.html', title='Registration',
+                                   form=form,
+                                   message="Password mismatch")
+
         user = User(
             email=form.email.data
         )
