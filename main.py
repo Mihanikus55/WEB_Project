@@ -1,6 +1,7 @@
 import os
 
 from flask_login import login_user, LoginManager, login_required, logout_user, current_user
+import requests
 
 from data import db_session
 from data.users import User
@@ -84,6 +85,15 @@ def logout():
 @app.route('/lobby', methods=['GET', 'POST'])
 @login_required
 def lobby():
+    params = {
+        "apikey": "qxrqatve9wzkpgqomdax",
+        "symbol": "BTC",
+        "days": "5"
+    }
+
+    response = requests.get("https://api.freecryptoapi.com/v1/getHistory.php", params=params).json()
+    print(response)
+
     return render_template('main_page.html', title="MiVa")
 
 
