@@ -2,7 +2,6 @@ import os
 
 from flask_login import login_user, LoginManager, login_required, logout_user, current_user
 import requests
-import json
 
 from data import db_session
 from data.users import User
@@ -107,8 +106,11 @@ def get_coins():
         'limit': limit,
         'convert': convert
     }
-
-    response = requests.get(url, headers=headers, params=params).json()['data']
+    try:
+        response = requests.get(url, headers=headers, params=params).json()['data']
+    except Exception as e:
+        print(e)
+        return redirect("/logout")
 
     data = [{
         "symbol": f"{item["symbol"]}",
