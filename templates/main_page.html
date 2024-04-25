@@ -35,7 +35,9 @@
             <tbody>
             {% for line in data %}
             <tr>
-                <td>{{line.symbol}}</td>
+                <td style="text-align: left; font-size: 21px; font-weight: 400;">{{line.symbol}}
+                    <p class="crypto-names">{{line.name}}</p>
+                </td>
                 <td>{{line.price}} $</td>
                 {% if line.percent_change <= 0 %}
                     <td style="color: #db1a1a;">{{line.percent_change}} %</td>

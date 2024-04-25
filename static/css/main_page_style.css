@@ -32,19 +32,28 @@ main {
 }
 main section {
     flex: 1;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: 4rem;
 }
 
 table {
     border-collapse: collapse;
-    width: 60%;
+    width: 70%;
     margin-top: 1rem;
+}
+.crypto-names {
+    color: #848e9c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
 }
 th, td {
     border: 1px solid #373b41;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 350;
+
 }
 th {
     background-color: #21262d;

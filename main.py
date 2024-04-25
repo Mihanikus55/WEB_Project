@@ -112,6 +112,7 @@ def get_coins():
 
     data = [{
         "symbol": f"{item["symbol"]}",
+        "name": f"{item["name"]}",
         "price": float(f"{round(item["quote"][convert]["price"], 2)}"),
         "percent_change": float(f"{round(item["quote"][convert][percent_change], 4)}")
     } for item in response]
