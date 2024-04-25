@@ -85,16 +85,25 @@ def logout():
 @app.route('/lobby', methods=['GET', 'POST'])
 @login_required
 def lobby():
-    params = {
-        "apikey": "qxrqatve9wzkpgqomdax",
-        "symbol": "BTC",
-        "days": "5"
-    }
+    data = get_coins()
+    return render_template('main_page.html', data=data)
 
-    response = requests.get("https://api.freecryptoapi.com/v1/getHistory.php", params=params).json()
-    print(response)
 
-    return render_template('main_page.html', title="MiVa")
+def get_coins():
+    return [
+            {
+                'symbol': 'BTC',
+                'price_usd': 10000,
+                'price_rub': 100,
+                'percent_change': -1283
+            },
+            {
+                'symbol': 'EXT',
+                'price_usd': 2773,
+                'price_rub': 233,
+                'percent_change': 283
+            }
+        ]
 
 
 if __name__ == '__main__':
