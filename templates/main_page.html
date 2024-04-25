@@ -16,19 +16,18 @@
 <header>
     <a class="navbar-brand" href="#">MiVa</a>
 
-    <p>{{ current_user.email }}</p>
+    <a class="name" href="/logout">{{ current_user.email }}</a>
 
 </header>
 
 <main>
     <section>
-        <h2>Markets</h2>
+        <h2>Cryptocurrency</h2>
         <table>
             <thead>
             <tr>
                 <th>Coin</th>
                 <th>Price USD</th>
-                <th>Price RUB</th>
                 <th>Percent change</th>
             </tr>
             </thead>
@@ -37,8 +36,7 @@
             {% for line in data %}
             <tr>
                 <td>{{line.symbol}}</td>
-                <td>{{line.price_usd}}</td>
-                <td>{{line.price_rub}}</td>
+                <td>{{line.price}} $</td>
                 {% if line.percent_change <= 0 %}
                     <td style="color: #db1a1a;">{{line.percent_change}} %</td>
                 {% else %}

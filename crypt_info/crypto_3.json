@@ -1,9 +1,9 @@
 {
   "status": {
-    "timestamp": "2024-04-25T02:19:47.500Z",
+    "timestamp": "2024-04-25T02:02:32.747Z",
     "error_code": 0,
     "error_message": null,
-    "elapsed": 19,
+    "elapsed": 38,
     "credit_count": 1,
     "notice": null,
     "total_count": 9810
@@ -57,23 +57,23 @@
       "self_reported_circulating_supply": null,
       "self_reported_market_cap": null,
       "tvl_ratio": null,
-      "last_updated": "2024-04-25T02:18:00.000Z",
+      "last_updated": "2024-04-25T02:02:00.000Z",
       "quote": {
-        "USD": {
-          "price": 64250.707796064955,
-          "volume_24h": 30962780068.97362,
-          "volume_change_24h": 27.4327,
-          "percent_change_1h": -0.30752381,
-          "percent_change_24h": -3.64665214,
-          "percent_change_7d": 4.32976211,
-          "percent_change_30d": -8.40411509,
-          "percent_change_60d": 24.19011196,
-          "percent_change_90d": 60.28906596,
-          "market_cap": 1265085770887.025,
-          "market_cap_dominance": 53.4447,
-          "fully_diluted_market_cap": 1349264863717.36,
+        "RUB": {
+          "price": 5902236.008669629,
+          "volume_24h": 2836802469861.733,
+          "volume_change_24h": 26.752,
+          "percent_change_1h": -0.97624935,
+          "percent_change_24h": -4.23337047,
+          "percent_change_7d": 3.60262645,
+          "percent_change_30d": -8.89987196,
+          "percent_change_60d": 23.68472091,
+          "percent_change_90d": 60.03717438,
+          "market_cap": 116214047239527.55,
+          "market_cap_dominance": 53.1893,
+          "fully_diluted_market_cap": 123946956182061.92,
           "tvl": null,
-          "last_updated": "2024-04-25T02:18:00.000Z"
+          "last_updated": "2024-04-25T02:01:03.000Z"
         }
       }
     },
@@ -125,23 +125,23 @@
       "self_reported_circulating_supply": null,
       "self_reported_market_cap": null,
       "tvl_ratio": null,
-      "last_updated": "2024-04-25T02:17:00.000Z",
+      "last_updated": "2024-04-25T02:01:00.000Z",
       "quote": {
-        "USD": {
-          "price": 3157.603419860805,
-          "volume_24h": 14376523580.01836,
-          "volume_change_24h": 29.486,
-          "percent_change_1h": -0.15759441,
-          "percent_change_24h": -2.39288919,
-          "percent_change_7d": 5.36208559,
-          "percent_change_30d": -12.4371932,
-          "percent_change_60d": 4.49907943,
-          "percent_change_90d": 41.54490499,
-          "market_cap": 385379611905.2253,
-          "market_cap_dominance": 16.2807,
-          "fully_diluted_market_cap": 385379611905.23,
+        "RUB": {
+          "price": 289744.1340187818,
+          "volume_24h": 1316962198673.1626,
+          "volume_change_24h": 28.3087,
+          "percent_change_1h": -0.60913144,
+          "percent_change_24h": -3.15342345,
+          "percent_change_7d": 4.61527979,
+          "percent_change_30d": -13.12424544,
+          "percent_change_60d": 4.09702928,
+          "percent_change_90d": 41.07670938,
+          "market_cap": 35362731499985.53,
+          "market_cap_dominance": 16.1849,
+          "fully_diluted_market_cap": 35362731499985.61,
           "tvl": null,
-          "last_updated": "2024-04-25T02:17:00.000Z"
+          "last_updated": "2024-04-25T02:01:03.000Z"
         }
       }
     },
@@ -180,23 +180,23 @@
       "self_reported_circulating_supply": null,
       "self_reported_market_cap": null,
       "tvl_ratio": null,
-      "last_updated": "2024-04-25T02:17:00.000Z",
+      "last_updated": "2024-04-25T02:01:00.000Z",
       "quote": {
-        "USD": {
-          "price": 1.000058518799584,
-          "volume_24h": 60976638516.42711,
-          "volume_change_24h": 20.68,
-          "percent_change_1h": 0.01738972,
-          "percent_change_24h": -0.00776695,
-          "percent_change_7d": -0.01101104,
-          "percent_change_30d": 0.00163423,
-          "percent_change_60d": 0.01424437,
-          "percent_change_90d": 0.06002763,
-          "market_cap": 110469979811.33717,
-          "market_cap_dominance": 4.6669,
-          "fully_diluted_market_cap": 112943159372.99,
+        "RUB": {
+          "price": 92.32514769940417,
+          "volume_24h": 5592458965664.939,
+          "volume_change_24h": 19.9684,
+          "percent_change_1h": 0.02514517,
+          "percent_change_24h": -0.03926566,
+          "percent_change_7d": -0.02507373,
+          "percent_change_30d": -0.03421769,
+          "percent_change_60d": -0.00109118,
+          "percent_change_90d": 0.03728543,
+          "market_cap": 10198560394920.105,
+          "market_cap_dominance": 4.6677,
+          "fully_diluted_market_cap": 10426883702030.562,
           "tvl": null,
-          "last_updated": "2024-04-25T02:17:00.000Z"
+          "last_updated": "2024-04-25T02:01:03.000Z"
         }
       }
     },
@@ -229,23 +229,23 @@
       "self_reported_circulating_supply": null,
       "self_reported_market_cap": null,
       "tvl_ratio": null,
-      "last_updated": "2024-04-25T02:17:00.000Z",
+      "last_updated": "2024-04-25T02:01:00.000Z",
       "quote": {
-        "USD": {
-          "price": 605.5544426422185,
-          "volume_24h": 1481808297.9049098,
-          "volume_change_24h": 7.0818,
-          "percent_change_1h": -0.15597503,
-          "percent_change_24h": 0.138614,
-          "percent_change_7d": 12.50779374,
-          "percent_change_30d": 2.44222226,
-          "percent_change_60d": 58.95204603,
-          "percent_change_90d": 105.61900449,
-          "market_cap": 89372754277.97182,
-          "market_cap_dominance": 3.7741,
-          "fully_diluted_market_cap": 89372754277.97,
+        "RUB": {
+          "price": 55661.84900969127,
+          "volume_24h": 136772305421.49393,
+          "volume_change_24h": 6.8127,
+          "percent_change_1h": -0.69467947,
+          "percent_change_24h": -0.54587997,
+          "percent_change_7d": 12.12214979,
+          "percent_change_30d": 1.87261622,
+          "percent_change_60d": 58.49140019,
+          "percent_change_90d": 105.17114651,
+          "market_cap": 8215037994758.624,
+          "market_cap_dominance": 3.7559,
+          "fully_diluted_market_cap": 8215037994758.776,
           "tvl": null,
-          "last_updated": "2024-04-25T02:17:00.000Z"
+          "last_updated": "2024-04-25T02:01:03.000Z"
         }
       }
     },
@@ -280,23 +280,23 @@
       "self_reported_circulating_supply": null,
       "self_reported_market_cap": null,
       "tvl_ratio": null,
-      "last_updated": "2024-04-25T02:17:00.000Z",
+      "last_updated": "2024-04-25T02:01:00.000Z",
       "quote": {
-        "USD": {
-          "price": 146.73032890466072,
-          "volume_24h": 3889423967.7569475,
-          "volume_change_24h": 35.853,
-          "percent_change_1h": -0.99704922,
-          "percent_change_24h": -6.92814207,
-          "percent_change_7d": 9.74734243,
-          "percent_change_30d": -22.98784959,
-          "percent_change_60d": 40.97246736,
-          "percent_change_90d": 67.89517721,
-          "market_cap": 65594516339.72887,
-          "market_cap_dominance": 2.7699,
-          "fully_diluted_market_cap": 84310955050.58,
+        "RUB": {
+          "price": 13474.6230909753,
+          "volume_24h": 355288661945.0597,
+          "volume_change_24h": 34.341,
+          "percent_change_1h": -1.87035788,
+          "percent_change_24h": -7.68333194,
+          "percent_change_7d": 9.51866598,
+          "percent_change_30d": -23.13406352,
+          "percent_change_60d": 40.61204078,
+          "percent_change_90d": 69.031273,
+          "market_cap": 6023712964529.396,
+          "market_cap_dominance": 2.754,
+          "fully_diluted_market_cap": 7742491618654.358,
           "tvl": null,
-          "last_updated": "2024-04-25T02:17:00.000Z"
+          "last_updated": "2024-04-25T02:01:03.000Z"
         }
       }
     }

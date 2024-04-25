@@ -10,8 +10,8 @@ headers = {
 }
 
 params = {
-    'start': '1',
-    'limit': '5',
+    'start': 1,
+    'limit': 5,
     'convert': 'USD'
 }
 

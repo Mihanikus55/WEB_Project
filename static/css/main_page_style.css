@@ -1,22 +1,27 @@
 body {
-    background-color: #1f1c1c;
+    background-color: #131722;
     color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+h2 {
+    color: #217f41;
+}
 header {
-    background-color: #131722;
+    background-color: #073d70;
     display: flex;
+    position: fixed;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 }
 header a {
-    color: #fff;
+    color: #ad219f;
     margin-left: 1rem;
 }
-header p {
+header .name {
     color: #B8860B;
     margin-right: 1rem;
 }
@@ -27,14 +32,14 @@ main {
 }
 main section {
     flex: 1;
-    margin-right: 1rem;
+    margin-left: 30%;
+    margin-top: 4rem;
 }
-main section:last-child {
-    margin-right: 0;
-}
+
 table {
     border-collapse: collapse;
     width: 60%;
+    margin-top: 1rem;
 }
 th, td {
     border: 1px solid #373b41;

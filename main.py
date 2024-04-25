@@ -2,6 +2,7 @@ import os
 
 from flask_login import login_user, LoginManager, login_required, logout_user, current_user
 import requests
+import json
 
 from data import db_session
 from data.users import User
@@ -90,20 +91,32 @@ def lobby():
 
 
 def get_coins():
-    return [
-            {
-                'symbol': 'BTC',
-                'price_usd': 10000,
-                'price_rub': 100,
-                'percent_change': -1283
-            },
-            {
-                'symbol': 'EXT',
-                'price_usd': 2773,
-                'price_rub': 233,
-                'percent_change': 283
-            }
-        ]
+    url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
+    api_key = "54d0320a-dc81-47c8-8f1c-217a128162f7"
+    start = 1
+    limit = 30
+    convert = 'USD'
+    percent_change = 'percent_change_24h'
+
+    headers = {
+        "X-CMC_PRO_API_KEY": api_key,
+        'Accepts': 'application/json'
+    }
+    params = {
+        'start': start,
+        'limit': limit,
+        'convert': convert
+    }
+
+    response = requests.get(url, headers=headers, params=params).json()['data']
+
+    data = [{
+        "symbol": f"{item["symbol"]}",
+        "price": float(f"{round(item["quote"][convert]["price"], 2)}"),
+        "percent_change": float(f"{round(item["quote"][convert][percent_change], 4)}")
+    } for item in response]
+
+    return data
 
 
 if __name__ == '__main__':
