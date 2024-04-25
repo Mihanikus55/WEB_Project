@@ -69,6 +69,11 @@ def login():
     return render_template('login.html', title="Authorization", form=form)
 
 
+@app.route("/forgot_password")
+def forgot_password():
+    return "<h2>In the development</h2>"
+
+
 @login_manager.user_loader
 def load_user(user_id):
     db_sess = db_session.create_session()
