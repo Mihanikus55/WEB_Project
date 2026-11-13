@@ -71,7 +71,7 @@ def login():
 
 @app.route("/forgot_password")
 def forgot_password():
-    return "<h2>In the development</h2>"
+    return "<h2>In the development😁</h2>"
 
 
 @login_manager.user_loader

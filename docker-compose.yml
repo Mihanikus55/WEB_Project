@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: cryptopulse_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB: crypto_tracker
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: .
+    container_name: cryptopulse_web
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      SECRET_KEY: super_secret_production_key
+      DATABASE_URL: postgresql+psycopg2://postgres:postgres_password@db:5432/crypto_tracker
+    volumes:
+      - ./db:/app/db
+      - ./crypt_info:/app/crypt_info
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

@@ -1,3 +1,4 @@
+import os
 import sqlalchemy as sa
 import sqlalchemy.orm as orm
 from sqlalchemy.orm import Session
@@ -16,8 +17,13 @@ def global_init(db_file):
     if not db_file or not db_file.strip():
         raise Exception("Необходимо указать файл базы данных.")
 
-    conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'
-    print(f"Подключение к базе данных по адресу {conn_str}")
+    env_db_url = os.environ.get("DATABASE_URL")
+    if env_db_url:
+        conn_str = env_db_url
+    else:
+        if not db_file or not db_file.strip():
+            raise Exception("Необходимо указать файл базы данных.")
+        conn_str = f'sqlite:///{db_file.strip()}?check_same_thread=False'
 
     engine = sa.create_engine(conn_str, echo=False)
     __factory = orm.sessionmaker(bind=engine)
